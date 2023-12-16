@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Toast from '$lib/Toast.svelte';
 	import { onMount } from 'svelte';
-	import { IconHeart } from '@tabler/icons-svelte';
 
 	onMount(() => {
 		(window as any)['showToast']('Hello, World!');
@@ -14,7 +13,6 @@
 	<h1 class="text-6xl">🍣JS</h1>
 	<div class="text-3xl">
 		<h2>
-			<IconHeart class="inline-block w-8 h-8 text-white" />
 			Hello from
 			<span class="text-orange-400 font-bold">SvelteKit 2</span>
 			with
