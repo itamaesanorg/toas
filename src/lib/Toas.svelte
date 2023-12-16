@@ -2,14 +2,16 @@
 	import { onMount } from 'svelte';
 	let show = false;
 	let message = '';
+	let type = ''; // 'success', 'loading', 'error'
 
 	// @ts-ignore
-	function showToas(msg) {
+	function showToas(msg, msgType) {
 		if (!msg) {
 			console.error('No message provided for toas');
 			return;
 		}
 		message = msg;
+		type = msgType;
 		show = true;
 		setTimeout(() => {
 			show = false;
@@ -27,7 +29,7 @@
 </script>
 
 {#if show}
-	<div class="toas">
+	<div class="toas {type}">
 		{message}
 	</div>
 {/if}
@@ -38,10 +40,28 @@
 		top: 2%;
 		left: 50%;
 		transform: translateX(-50%);
-		background-color: #333;
-		color: #fff;
 		padding: 10px;
 		border-radius: 5px;
 		z-index: 9999;
+	}
+
+	.toas.onmount {
+		background-color: #000;
+		color: #fff;
+	}
+
+	.toas.success {
+		background-color: #4caf50;
+		color: #fff;
+	}
+
+	.toas.loading {
+		background-color: #ff9800;
+		color: #fff;
+	}
+
+	.toas.error {
+		background-color: #f44336;
+		color: #fff;
 	}
 </style>
