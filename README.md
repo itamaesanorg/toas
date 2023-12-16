@@ -1,7 +1,7 @@
 > [!NOTE]  
 > This is in pre-beta
 
-![Toas Header Image](static/toast.jpg)
+![Toas Header Image](./static/toast.jpg)
 
 - [Initial config](#initial-config)
 	- [In this version](#in-this-version)
