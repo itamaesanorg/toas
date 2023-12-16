@@ -2,22 +2,20 @@
 > This is in pre-beta
 
 # Initial config
-It is a skeleton project, using JavaScript with JSDoc comments, also we added ESLint for code linting, Prettier for code formatting and Vitest for unit testing
+Toas is a web component that will allow you to add notifications without the need of an external library.
 
-## First Optimization
-We added our own toast system:
-
-### Sushi Toast
+## Component
 
 ```svelte
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 	let show = false;
 	let message = '';
 
-	function showToast(msg: string) {
+	// @ts-ignore
+	function showToas(msg) {
 		if (!msg) {
-			console.error('No message provided for toast');
+			console.error('No message provided for toas');
 			return;
 		}
 		message = msg;
@@ -32,18 +30,19 @@ We added our own toast system:
 			console.error('Window object is not available');
 			return;
 		}
-		(window as any)['showToast'] = showToast;
+		// @ts-ignore
+		window['showToas'] = showToas;
 	});
 </script>
 
 {#if show}
-	<div class="toast">
+	<div class="toas">
 		{message}
 	</div>
 {/if}
 
 <style>
-	.toast {
+	.toas {
 		position: fixed;
 		top: 2%;
 		left: 50%;
@@ -57,45 +56,42 @@ We added our own toast system:
 </style>
 ```
 
-It works directly on the components and pages, no need to go html
+## Use case
 
 ```svelte
-<script lang="ts">
-	import Toast from '$lib/Toast.svelte';
+<script>
+	import Toas from '$lib/Toas.svelte';
 	import { onMount } from 'svelte';
-	import { IconHeart } from '@tabler/icons-svelte';
 
 	onMount(() => {
-		(window as any)['showToast']('Hello, World!');
+		// @ts-ignore
+		window['showToas']('Hello, World!');
 	});
 </script>
 
-<Toast />
+<Toas />
 
-<div class="flex flex-col space-y-8 p-8 items-center text-white justify-center h-screen">
-	<h1 class="text-6xl">🍣JS</h1>
+<div class="flex flex-col space-y-8 p-8 items-center text-white justify-center h-screen bg-black">
+	<h1 class="text-6xl">🍞 Toas</h1>
 	<div class="text-3xl">
 		<h2>
-			<IconHeart class="inline-block w-8 h-8 text-white" />
-			Hello from
+			Toas is a
 			<span class="text-orange-400 font-bold">SvelteKit 2</span>
 			with
 			<span class="text-pink-400 font-bold">Vite 5</span>
+			web component.
 		</h2>
-	</div>
-	<div class="text-2xl">
-		<h2 class="flex flex-col items-center p-2">
-			SushiJS also comes with
-			<span class="text-green-400 font-bold p-2">PocketBase</span>
-			and
-			<span class="text-blue-400 font-bold p-2">WC-Toast</span>
+		<br />
+		<h2>
+			Just
+			<span class="text-green-400 font-bold">import</span>
+			to use.
+		</h2>
+		<br />
+		<h2>
+			<span class="text-blue-400 font-bold">No</span>
+			dependencies.
 		</h2>
 	</div>
 </div>
-
-<style lang="postcss">
-	:global(html) {
-		background-color: theme(colors.black);
-	}
-</style>
 ```
