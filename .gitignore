@@ -8,6 +8,10 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Dependency directories
 pnpm-lock.yaml
+
+# Marketing
 static/toas.fig
 static/logo.png
