@@ -3,6 +3,9 @@
 
 ![Toas Header Image](./static/toast.jpg)
 
+Thanks for your support Vite
+![Thanks for your support Vite](./static/support.png)
+
 - [Initial config](#initial-config)
 	- [In this version](#in-this-version)
 	- [How to use it](#how-to-use-it)
