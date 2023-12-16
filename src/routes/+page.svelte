@@ -1,6 +1,7 @@
 <script>
 	import Toas from '$lib/Toas.svelte';
 	import { onMount } from 'svelte';
+	import Footer from '../lib/Footer.svelte';
 
 	function handleSuccessClick() {
 		// @ts-ignore
@@ -19,17 +20,21 @@
 
 	onMount(() => {
 		// @ts-ignore
-		window['showToas']('Hello, World!', 'onmount');
+		window['showToas']('🍞 Welcome to Toas', 'onmount');
 	});
 </script>
 
 <Toas />
 
 <div class="flex flex-col space-y-8 p-8 items-center text-white justify-center h-screen bg-black">
-	<h1 class="text-6xl">🍞 Toas</h1>
+	<div class="flex flex-row space-x-8 text-black font-bold">
+		<h1 class="text-6xl font-medium">
+			<img src="/logoes.png" alt="Toas" class="inline-block w-16 h-16" />
+			<p>Toas</p>
+		</h1>
+	</div>
 	<div class="text-3xl">
 		<h2>
-			Toas is a
 			<span class="text-orange-400 font-bold">SvelteKit 2</span>
 			with
 			<span class="text-pink-400 font-bold">Vite 5</span>
@@ -67,7 +72,28 @@
 			Error
 		</button>
 	</div>
+	<Footer />
 </div>
+
+<!-- <div class="flex flex-row space-x-8 text-black font-bold">
+	<a
+		href="https://github.com/itamaesanorg/toas"
+		target="_blank"
+		rel="noopener noreferrer"
+		class="text-blue-400 font-bold"
+	>
+		GitHub
+	</a>
+	<br />
+	<a
+		href="https://www.npmjs.com/package/toas"
+		target="_blank"
+		rel="noopener noreferrer"
+		class="text-blue-400 font-bold"
+	>
+		NPM
+	</a>
+</div> -->
 
 <style>
 	button {

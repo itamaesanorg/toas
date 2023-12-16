@@ -37,12 +37,15 @@
 <style>
 	.toas {
 		position: fixed;
-		top: 2%;
+		display: flex;
+		top: 1%;
 		left: 50%;
 		transform: translateX(-50%);
 		padding: 10px;
 		border-radius: 5px;
+		background-color: #fff;
 		z-index: 9999;
+		box-shadow: 0 0 10px #000;
 	}
 
 	.toas.onmount {
@@ -57,7 +60,8 @@
 
 	.toas.loading {
 		background-color: #ff9800;
-		color: #fff;
+		color: #000;
+		left: 80%;
 	}
 
 	.toas.error {
