@@ -1,6 +1,9 @@
 {
 	"name": "toas",
 	"version": "0.0.1",
+	"github version": "0.0.1",
+	"npm version": "0.0.1",
+	"description": "Toas is a simple web component to show notifications without the need of any dependencies.",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -33,6 +36,27 @@
 		"vitest": "^1.0.0"
 	},
 	"type": "module",
-	"dependencies": {
-	}
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itamaesanorg/toas.git"
+	},
+	"keywords": [
+		"js",
+		"javascript",
+		"svelte",
+		"sveltekit",
+		"vite",
+		"toas",
+		"toast",
+		"notification",
+		"wc-toast",
+		"web component"
+	],
+	"author": "ITAMAESAN ORG & Miguel Gargallo",
+	"license": "other",
+	"bugs": {
+		"url": "https://github.com/itamaesanorg/toas/issues"
+	},
+	"homepage": "https://itamaesan.org"
 }
