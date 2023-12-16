@@ -4,7 +4,7 @@
 	"github version": "0.0.1",
 	"npm version": "0.0.1",
 	"description": "Toas is a simple web component to show notifications without the need of any dependencies.",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
