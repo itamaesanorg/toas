@@ -1,11 +1,12 @@
-<script lang="ts">
+<script>
 	import { onMount } from 'svelte';
 	let show = false;
 	let message = '';
 
-	function showToast(msg: string) {
+	// @ts-ignore
+	function showToas(msg) {
 		if (!msg) {
-			console.error('No message provided for toast');
+			console.error('No message provided for toas');
 			return;
 		}
 		message = msg;
@@ -20,18 +21,19 @@
 			console.error('Window object is not available');
 			return;
 		}
-		(window as any)['showToast'] = showToast;
+		// @ts-ignore
+		window['showToas'] = showToas;
 	});
 </script>
 
 {#if show}
-	<div class="toast">
+	<div class="toas">
 		{message}
 	</div>
 {/if}
 
 <style>
-	.toast {
+	.toas {
 		position: fixed;
 		top: 2%;
 		left: 50%;

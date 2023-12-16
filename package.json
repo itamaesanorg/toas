@@ -1,12 +1,12 @@
 {
-	"name": "sushi",
+	"name": "toas",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"clean": "rm -rf node_modules .svelte-kit pnpm-lock.yaml",
-		"redo": "pnpm clean && pnpm i && pnpm dev",
+		"redo": "pnpm clean && pnpm i && pnpm build && pnpm dev",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
@@ -34,6 +34,5 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"pocketbase": "^0.20.1"
 	}
 }
