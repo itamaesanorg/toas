@@ -5,6 +5,7 @@
 
 Thanks for your support Vite
 ![Thanks for your support Vite](./static/support.png)
+Source: [https://x.com/MiguelGargallo/status/1736023947810885761?s=20](https://x.com/MiguelGargallo/status/1736023947810885761?s=20)
 
 - [Initial config](#initial-config)
 	- [In this version](#in-this-version)
