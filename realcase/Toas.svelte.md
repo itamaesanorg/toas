@@ -1,3 +1,4 @@
+```svelte
 <script>
 	import { onMount } from 'svelte';
 	let show = false;
@@ -69,3 +70,4 @@
 		color: #000;
 	}
 </style>
+```

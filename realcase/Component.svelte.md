@@ -1,3 +1,4 @@
+```svelte
 <!-- List.svelte -->
 
 <script>
@@ -48,3 +49,4 @@
 		</div>
 	{/each}
 </div>
+```
