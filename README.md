@@ -23,18 +23,15 @@ Look, you add the export function you can look at the directory for a [Real case
 <script>
 	import Toas from '$lib/Toas.svelte';
 
-	export function handleSuccess() {
-		// @ts-ignore
+	function handleSuccess() {
 		window['showToas']('Operation Successful', 'success');
 	}
 	
-	export function handleError() {
-		// @ts-ignore
+	function handleError() {
 		window['showToas']('Operation Error', 'error');
 	}
 
-	export function handleLoading() {
-		// @ts-ignore
+	function handleLoading() {
 		window['showToas']('Operation Loading', 'loading');
 	}
 	

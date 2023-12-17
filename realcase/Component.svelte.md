@@ -5,7 +5,7 @@
 	import PocketBase from 'pocketbase';
 	import Toas from './Toas.svelte';
 
-	export function handleSuccessClick() {
+	function handleSuccessClick() {
 		// @ts-ignore
 		window['showToas']('Operation Successful', 'success');
 	}
