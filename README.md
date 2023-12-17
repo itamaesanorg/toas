@@ -18,7 +18,7 @@ Source: [https://x.com/MiguelGargallo/status/1736023947810885761?s=20](https://x
 Look, you add the export function
 
 ```svelte
-<!-- List.svelte -->
+<!-- Component.svelte -->
 
 <script>
 	import Toas from '$lib/Toas.svelte';
