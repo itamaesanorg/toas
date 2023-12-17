@@ -1,6 +1,6 @@
 {
 	"name": "toas",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Toas is a simple web component to show notifications without the need of any dependencies.",
 	"private": false,
 	"scripts": {
