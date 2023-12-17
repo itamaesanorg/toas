@@ -1,14 +1,19 @@
 ```svelte
-<!-- List.svelte -->
+<!-- Component.svelte -->
 
 <script>
 	import PocketBase from 'pocketbase';
-	import Toas from './Toas.svelte';
+	import Toas from '$lib/Toas.svelte';
 
 	function handleSuccessClick() {
 		// @ts-ignore
 		window['showToas']('Operation Successful', 'success');
 	}
+	function handleLoadingClick() {
+		// @ts-ignore
+		window['showToas']('Operation in progress', 'loading');
+	}
+
 	const pb = new PocketBase(import.meta.env.VITE_DATABASE);
 
 	/**
