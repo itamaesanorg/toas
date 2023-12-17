@@ -15,7 +15,7 @@ Source: [https://x.com/MiguelGargallo/status/1736023947810885761?s=20](https://x
 
 ## Usage
 
-Look, you add the export function
+Look, you add the export function you can look at the directory for a [Real case](./realcase/Component.svelte.md)
 
 ```svelte
 <!-- Component.svelte -->
