@@ -49,12 +49,6 @@
 		box-shadow: 0 0 10px #000;
 	}
 
-	.toas.onmount {
-		background-color: #cacaca;
-		color: #000;
-		font-weight: bold;
-	}
-
 	.toas.success {
 		background-color: #4caf50;
 		color: #000;

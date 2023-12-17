@@ -2,36 +2,31 @@
 <!-- Component.svelte -->
 
 <script>
+	import { onMount } from 'svelte';
 	import PocketBase from 'pocketbase';
 	import Toas from '$lib/Toas.svelte';
 
-	function handleSuccessClick() {
-		// @ts-ignore
-		window['showToas']('Operation Successful', 'success');
-	}
-	function handleLoadingClick() {
-		// @ts-ignore
-		window['showToas']('Operation in progress', 'loading');
-	}
-
+	let records = [];
 	const pb = new PocketBase(import.meta.env.VITE_DATABASE);
 
-	/**
-	 * @type {any[]}
-	 */
-	let records = [];
+	function showToas(message, type) {
+		if (typeof window !== 'undefined') {
+			// @ts-ignore
+			window['showToas'](message, type);
+		}
+	}
 
-	const fetchRecords = async () => {
+	onMount(async () => {
+		showToas('Operation in progress', 'loading');
 		try {
 			const recordsData = await pb.collection('users').getFullList();
 			records = recordsData;
-			handleSuccessClick();
+			showToas('Operation Successful', 'success');
 		} catch (err) {
+			showToas('Operation Failed', 'error');
 			console.log(err);
 		}
-	};
-
-	fetchRecords();
+	});
 
 	export { records };
 </script>
