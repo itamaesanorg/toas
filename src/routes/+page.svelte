@@ -1,25 +1,21 @@
 <script>
+	// @ts-nocheck
+
 	import Toas from '$lib/Toas.svelte';
 	import { onMount } from 'svelte';
 	import Footer from '../lib/Footer.svelte';
 
-	function handleSuccessClick() {
-		// @ts-ignore
+	function ToasSuccess() {
 		window['showToas']('Operation Successful', 'success');
 	}
-
-	function handleLoadingClick() {
-		// @ts-ignore
-		window['showToas']('Operation Loading', 'loading');
-	}
-
-	function handleErrorClick() {
-		// @ts-ignore
+	function ToasError() {
 		window['showToas']('Operation Failed', 'error');
+	}
+	function ToasLoading() {
+		window['showToas']('Loading...', 'loading');
 	}
 
 	onMount(() => {
-		// @ts-ignore
 		window['showToas']('🍞 Welcome to Toas', 'onmount');
 	});
 </script>
@@ -54,19 +50,19 @@
 	</div>
 	<div class="flex flex-row space-x-8 text-black font-bold">
 		<button
-			on:click={handleSuccessClick}
+			on:click={ToasSuccess}
 			class="mt-4 px-4 py-2 bg-green-500 rounded shadow-md hover:shadow-lg shadow-green-500 hover:shadow-green-800"
 		>
 			Success
 		</button>
 		<button
-			on:click={handleLoadingClick}
+			on:click={ToasLoading}
 			class="mt-4 px-4 py-2 bg-yellow-500 rounded shadow-md hover:shadow-lg shadow-yellow-500 hover:shadow-yellow-800"
 		>
 			Loading
 		</button>
 		<button
-			on:click={handleErrorClick}
+			on:click={ToasError}
 			class="mt-4 px-4 py-2 bg-red-500 rounded shadow-md hover:shadow-lg shadow-red-500 hover:shadow-red-800"
 		>
 			Error
@@ -74,26 +70,6 @@
 	</div>
 	<Footer />
 </div>
-
-<!-- <div class="flex flex-row space-x-8 text-black font-bold">
-	<a
-		href="https://github.com/itamaesanorg/toas"
-		target="_blank"
-		rel="noopener noreferrer"
-		class="text-blue-400 font-bold"
-	>
-		GitHub
-	</a>
-	<br />
-	<a
-		href="https://www.npmjs.com/package/toas"
-		target="_blank"
-		rel="noopener noreferrer"
-		class="text-blue-400 font-bold"
-	>
-		NPM
-	</a>
-</div> -->
 
 <style>
 	button {
